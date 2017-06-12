@@ -1,6 +1,7 @@
 //Ë³ĞòÕ»µÄÎïÀíÊµÏÖ·½·¨£¬ÆäÖĞ°üº¬Ò»¸öÒç³ö´¦Àíº¯Êı£¬´Ëº¯ÊıÎªÀàµÄË½ÓĞ³ÉÔ±,ÔÚÖ÷º¯ÊıÖĞÍê³ÉÖĞ×º×ªºó×ºµÄ²Ù×÷
 #include <iostream>
-#include <string>
+#include <cstdlib>
+#include <cstring>
 using namespace std;
 void postfix(char expression[]);
 int icp(char ch);
@@ -42,7 +43,7 @@ class Stack
 				cout<<"Õ»Îª¿Õ"<<endl;
 				return true;
 			}
-			else 
+			else
 				return false;
 		}
 };
@@ -115,20 +116,20 @@ bool Stack<T> :: getTop( T &x )//»ñµÃÕ»¶¥Ö¸ÕëµÄÖµ£¬ÓÃÒıÓÃĞÍ²ÎÊıÏòÍâ´«µİÕ»¶¥ÔªËØµ
 }
 
 
-void main()
+int main()
 {
 	int size ;
 	cout<<"ÇëÊäÈëĞèÒª´´½¨Õ»µÄÔ¤¼Æ×î´ó³¤¶È";
 	cin>>size;
 	Stack<char> s(size);
-	
+
 	char ch='#',ch1,op;
 	s.Push(ch);//½«#ºÅÈëÕ»£¬ÓÃÓÚ×öÎªÑ­»·½áÊøµÄ±êÖ¾
 
 	//´´½¨ºó×º±í´ïÊ½µÄ´æ´¢Êı×é
 	const int maxsize = 50;
 	char postfix[maxsize];//ÓÃÓÚ´æ·Åºó×º±í´ïÊ½£¬Êı×éµÄ×î´ó³¤¶È±ØĞëÒª¹Ì¶¨
-	
+
 	cin.get(ch);//ÊäÈë±í´ïÊ½µÄÒ»¸ö×Ö·û
 	int i=0;//ºó×º±í´ïÊ½µÄÑ­»·±äÁ¿£¬±ØĞëÒª³õÊ¼»¯£¬·ñÔò²»ÄÜÕıÈ·Ö´ĞĞ
 	while( !s.isEmpty() &&ch!='#' )//Ñ­»·½áÊøµÄÌõ¼ş
@@ -180,6 +181,8 @@ void main()
 	{
 		cout<<postfix[j];//½«ºó×º±í´ïÊ½Êä³ö
 	}
+
+	return 0;
 }
 
 
@@ -187,7 +190,7 @@ bool isdigit(char ch)//ÅĞ¶ÏÊÇ²»ÊÇ²Ù×÷ÊıµÄº¯Êı
 {
 	if ( ch != '+' && ch != '-' && ch != '*' && ch != '/' && ch != '#' && ch != '('&& ch !=')' )
 		return true;
-	else 
+	else
 		return false;
 }
 
@@ -227,4 +230,3 @@ int isp(char ch)//Õ»ÄÚÓÅÏÈ¼¶µÄ±È½Ïº¯Êı
 }
 
 
-	

@@ -4,25 +4,25 @@
 #include "BinaryTree4.H"
 #include "BinaryTree4.H"//对条件编译语句进行测试
 using namespace std;
-void main()
+int main()
 {
 	int size;
 	cout<<"请输入所需队列的预计最大空间：";
 	cin>>size;
 	char ch = '#';
 	BinaryTree<char> tree(ch,size) ;
-	
+
 	BinTreeNode<char> *Root;
 	BinTreeNode<char> *current;
     cout<<"请按前序优先遍历顺序依次输入结点的数据值：";
 	tree.createBinaryTree(current);
 	Root =tree. getRoot();
-	
-	
+
+
 	cout<<"先序优先遍历序列为：";
 	tree.Preorder(Root);
 	cout<<endl;
-    
+
 	cout<<"后序优先遍历序列为：";
 	tree.Postorder(Root);
 	cout<<endl;
@@ -42,13 +42,14 @@ void main()
 	tree.Levelorder();
 	cout<<endl;
 
-	
+
 	tree.Preorder();
     cout<<endl;
-	
+
 	tree.Inorder();
 	cout<<endl;
 	tree.deletion();
+	return 0;
 }
 
 /*************************************************************************************************

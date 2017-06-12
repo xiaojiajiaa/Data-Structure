@@ -3,7 +3,7 @@
 #include "LinkNode.H"
 using namespace std;
 
-void main()
+int main()
 {
 	InkLink<int> list;
 
@@ -44,7 +44,7 @@ void main()
 		cout<<"输入的位置不合法，无法返回用户需要的参数";
 	}
 	cout<<endl;
-
+    return 0;
 }
 //运行结果：
 /*=======================================================================================

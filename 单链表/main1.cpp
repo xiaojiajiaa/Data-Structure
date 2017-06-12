@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void main()
+int  main()
 {
 	InkLink<int> list;
 	cout<<"请输入标志位，由用户自定义,输入在键盘上能敲入的字符:";
@@ -14,7 +14,7 @@ void main()
 	list.create(m);
 	list.output();
 	list.length();
-	
+
 	int i;
 	cout<<"请输入要插入结点的位置:";
 	cin>>i;
@@ -24,4 +24,5 @@ void main()
 
 	list.makeEmpty();
 	list.output();
+	return 0;
 }

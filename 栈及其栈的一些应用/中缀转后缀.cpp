@@ -5,20 +5,20 @@
 #include "isp.H"
 using namespace std;
 
-void main()
+int main()
 {
 	int size ;
 	cout<<"请输入需要创建栈的预计最大长度:";
 	cin>>size;
 	Stack<char> s(size);
-	
+
 	char ch='#',ch1,op;
 	s.Push(ch);//将#号入栈，用于做为循环结束的标志
 
 	//创建后缀表达式的存储数组
 	const int maxsize = 50;
 	char postfix[maxsize];//用于存放后缀表达式，数组的最大长度必须要固定
-	
+
 	cin.get(ch);//输入表达式的一个字符
 	int i=0;//后缀表达式的循环变量，必须要初始化，否则不能正确执行
 	while( !s.isEmpty() &&ch!='#' )//循环结束的条件
@@ -71,6 +71,7 @@ void main()
 		cout<<postfix[j];//将后缀表达式输出
 	}
 	cout<<endl;
+	return 0;
 }
 
 /*==================================================================

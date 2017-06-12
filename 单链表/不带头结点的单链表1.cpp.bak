@@ -1,6 +1,6 @@
 //2012.10.16
 #include <iostream>
-#include <cstdlib>
+#include <stdlib>
 using namespace std;
 
 template <class T>//创建单链表的结点模板类

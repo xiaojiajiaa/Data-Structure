@@ -126,10 +126,10 @@ void BinaryTree<T> :: Inorder(BinTreeNode<T> *current)
 		Inorder(current->rightchild);
 	}
 }
-	
+
 template <class T>
 void BinaryTree<T> :: Postorder(BinTreeNode<T> *current)
-{	
+{
 	if (current != NULL)
 	{
 		Postorder(current->leftchild);
@@ -150,16 +150,16 @@ void BinaryTree<T> :: Preorder(BinTreeNode<T> *current)
 }
 
 
-void main()
+int main()
 {
 	char ch = '#';
 	BinaryTree<char> tree(ch) ;
-	
+
 	BinTreeNode<char> *Root;
 
 	tree.createBinaryTree();
 	Root =tree. getRoot();
-	
+
 	tree.Preorder(Root);
 	cout<<endl;
 
@@ -168,6 +168,7 @@ void main()
 
 	tree.Inorder(Root);
 	cout<<endl;
+	return 0;
 }
 
 

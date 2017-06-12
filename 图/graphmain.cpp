@@ -2,7 +2,7 @@
 #include "GRAPHMTX.H"
 using namespace std;
 
-void main ()
+int main ()
 {
 	int size;
 	cout<<"请输入邻接矩阵的预计最大顶点数：";
@@ -34,4 +34,5 @@ void main ()
 
 	G.BFS(G,ch);
 	cout<<endl;
+	return 0;
 }

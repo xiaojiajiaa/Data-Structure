@@ -96,7 +96,7 @@ void BinaryTree<T> :: createBinaryTree(BinTreeNode<T> *&current)//特别注意此函数
 			cout<<"空间分配错误"<<endl;
 			exit(1);
 		}
-		
+
 		createBinaryTree(current->leftchild);
 		createBinaryTree(current->rightchild);
 	}
@@ -134,10 +134,10 @@ void BinaryTree<T> :: Inorder(BinTreeNode<T> *current)
 }
 
 
-//递归实现后续遍历	
+//递归实现后续遍历
 template <class T>
 void BinaryTree<T> :: Postorder(BinTreeNode<T> *current)
-{	
+{
 	if (current != NULL)//递归结束的条件
 	{
 		Postorder(current->leftchild);
@@ -171,29 +171,29 @@ int BinaryTree<T> ::Size(BinTreeNode<T> *current)
 
 	else
 	{
-		
+
 		return 1+Size(current->leftchild)+Size(current->rightchild);
 	}
 }
 
 
 
-void main()
+int main()
 {
 	char ch = '#';
 	BinaryTree<char> tree(ch) ;
-	
+
 	BinTreeNode<char> *Root;
 	BinTreeNode<char> *current;
 
 	tree.createBinaryTree(current);
 	Root =tree. getRoot();
-	
-	
+
+
 	cout<<"先序遍历序列为：";
 	tree.Preorder(Root);
 	cout<<endl;
-    
+
 	cout<<"后续遍历序列为：";
 	tree.Postorder(Root);
 	cout<<endl;
@@ -204,6 +204,7 @@ void main()
 
 	cout<<"结点的总数为："<<tree.Size(Root);
 	cout<<endl;
+	return 0;
 }
 
 

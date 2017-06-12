@@ -1,12 +1,12 @@
 //next数组的物理实现,已优化
 #include <iostream>
-#include <string>
+#include <cstring>
 using namespace std;
-void main()
+int main()
 {
 	const int maxsize =20;
 	char pattern[maxsize]="abcdaabcab";
-	
+
 	int length = strlen(pattern);
 	int *next = new int[length];
 
@@ -35,4 +35,6 @@ void main()
 		cout<<next[j]<<'\t';
 	}
 	cout<<endl;
+
+	return 0;
 }

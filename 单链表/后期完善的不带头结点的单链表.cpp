@@ -106,7 +106,7 @@ Linknode<T> *InkLink<T> :: setPos(int i)
 template <class T>
 bool InkLink<T> :: insert(int i) //实现在指定位置之后的插入，人为规定链表第一个结点的相对位置为0
 {
-	if (i<0) 
+	if (i<0)
 	{
 		cout<<"The location is illgal";
 		return false;
@@ -158,13 +158,13 @@ int InkLink<T> :: length()
 template <class T>
 bool InkLink<T> :: makeEmpty()
 {
-	
-	if (head==NULL) 
+
+	if (head==NULL)
 	{
 		cout<<"The list is empty"<<endl;
 		return false;
 	}
-	else 
+	else
 	{
 		while(head!=NULL)
 		{
@@ -195,12 +195,12 @@ bool InkLink<T> :: getpos (int &p,const T value)
 	return true;
 };
 /*此函数的时间复杂度为O（n）,循环次数由标志位决定*/
-void main()
+int main()
 {
 	int n=0;char value;
 	InkLink <char> list;
 	char const m = '\0';
-	
+
 
 	list.create(m);
 	cout<<endl;
@@ -226,5 +226,5 @@ void main()
 	list.makeEmpty();
 	cout<<endl;
 	cout<<"The long of list is:"<<list.length()<<endl;
-	
+    return 0;
 }

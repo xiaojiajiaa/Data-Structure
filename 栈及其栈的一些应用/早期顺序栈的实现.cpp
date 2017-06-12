@@ -1,5 +1,6 @@
 //顺序栈,并且栈顶指针指向当前元素
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 template <class T>
 class arrStack
@@ -59,7 +60,7 @@ bool arrStack<T> :: pop(T&value)
 		return true;
 	}
 }
-void main()
+int main()
 {
 	int n;
 	cout<<"请输入需要创建栈的最大长度：";
@@ -82,6 +83,7 @@ void main()
 	{
 		cout<<"栈为空没有出栈的元素";
 	}
+	return 0;
 }
 
 

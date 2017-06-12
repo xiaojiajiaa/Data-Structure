@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 using namespace std;
 int main ()
 {
@@ -11,7 +11,7 @@ int main ()
 
 	int *next = new int [lengthP];
 	next[0] = -1;
-	
+
 	//确定next数组
 	int i = 0;
 	int k = -1;
@@ -28,7 +28,7 @@ int main ()
 			}
 		}
 
-		else 
+		else
 		{
 			k = next[k];
 		}

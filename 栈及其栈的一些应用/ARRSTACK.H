@@ -4,7 +4,8 @@
 
 //顺序栈的物理实现方法，其中包含一个衣橱处理函数，此函数为类的私有成员
 #include <iostream>
-#include <string>
+#include <cstdlib>
+#include <cstring>
 using namespace std;
 const int stackIncreament = 20;//全局变量，用于溢出处理时动态的增加需要的存储单元数
 template <class T>
@@ -42,7 +43,7 @@ bool isEmpty()
 				cout<<"栈为空"<<endl;
 				return true;
 			}
-			else 
+			else
 				return false;
 		}
 };

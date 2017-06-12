@@ -88,7 +88,7 @@ template <class T>
 void BinaryTree<T> :: createBinaryTree(BinTreeNode<T> *&current)
 {
 	T temp;
-	
+
 	cin>>temp;
 	if (temp != endTag)
 	{
@@ -98,7 +98,7 @@ void BinaryTree<T> :: createBinaryTree(BinTreeNode<T> *&current)
 			cout<<"空间分配错误"<<endl;
 			exit(1);
 		}
-		
+
 		createBinaryTree(current->leftchild);
 		createBinaryTree(current->rightchild);
 	}
@@ -136,10 +136,10 @@ void BinaryTree<T> :: Inorder(BinTreeNode<T> *current)
 }
 
 
-//递归实现后续遍历	
+//递归实现后续遍历
 template <class T>
 void BinaryTree<T> :: Postorder(BinTreeNode<T> *current)
-{	
+{
 	if (current != NULL)//递归结束的条件
 	{
 		Postorder(current->leftchild);
@@ -173,7 +173,7 @@ int BinaryTree<T> ::Size(BinTreeNode<T> *current)
 
 	else
 	{
-		
+
 		return 1+Size(current->leftchild)+Size(current->rightchild);
 	}
 }
@@ -203,9 +203,9 @@ int BinaryTree<T> :: countLeaf(BinTreeNode<T> *current,int &count)
 template <class T>
 void BinaryTree<T> :: Levelorder()
 {
-	
-	
-	
+
+
+
 	BinTreeNode<T> *current = root;
 	Q.inQueue(current);
 	while (!Q.isEmpty())
@@ -289,26 +289,25 @@ void BinaryTree<T> :: Inorder()
 	}
 	while(!S1.isEmpty() || current != NULL)
 }*/
-
-void main()
+int main()
 {
 	int size;
 	cout<<"请输入所需队列的预计最大空间：";
 	cin>>size;
 	char ch = '#';
 	BinaryTree<char> tree(ch,size) ;
-	
+
 	BinTreeNode<char> *Root;
 	BinTreeNode<char> *current;
     cout<<"请按前序优先遍历顺序依次输入结点的数据值：";
 	tree.createBinaryTree(current);
 	Root =tree. getRoot();
-	
-	
+
+
 	cout<<"先序优先遍历序列为：";
 	tree.Preorder(Root);
 	cout<<endl;
-    
+
 	cout<<"后序优先遍历序列为：";
 	tree.Postorder(Root);
 	cout<<endl;
@@ -328,19 +327,12 @@ void main()
 	tree.Levelorder();
 	cout<<endl;
 
-	
+
 	tree.Preorder();
     cout<<endl;
-	
+
 	//tree.Inorder();
 	//cout<<endl;
 	tree.deletion();
-
-
-	
-	
-
-
-
-
+    return 0;
 }

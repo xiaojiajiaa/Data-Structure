@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std;//被其他文件包含时只能用这个不能用<iostream.h>
 
 template <class T>
@@ -40,7 +41,7 @@ bool Queue<T> :: isEmpty()
 		//cout<<"循环队列为空"<<endl;
 		return true;
 	}
-	else 
+	else
 	{
 		return false;
 	}

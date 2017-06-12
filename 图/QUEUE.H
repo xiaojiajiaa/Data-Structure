@@ -2,6 +2,7 @@
 #define _QUEUE_H_
 //顺序循环队列的具体物理实现，基与数组的实现方式
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 template <class T>
 class Queue
@@ -42,7 +43,7 @@ bool Queue<T> :: isEmpty()
 		cout<<"循环队列为空"<<endl;
 		return true;
 	}
-	else 
+	else
 	{
 		return false;
 	}

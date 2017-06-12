@@ -18,7 +18,7 @@ class Linknode
 		}
 };
 template <class T>
-class InkLink:
+class InkLink
 {
 	private:
 		Linknode<T> *head,*tail;
@@ -115,16 +115,7 @@ bool InkLink<T> :: find(T value,int &i)
 }
 
 
-
-
-
-
-
-
-
-
-
-void main()
+int main()
 {
 	InkLink<int> list;
 
@@ -165,5 +156,5 @@ void main()
 		cout<<"输入的位置不合法，无法返回用户需要的参数";
 	}
 	cout<<endl;
-
+    return 0;
 }

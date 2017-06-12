@@ -1,11 +1,11 @@
-#include<iostream>
-#include<String>
+#include <iostream>
+#include <cstring>
 using namespace std;
 
 template<class T>
 class Stack                                    //栈的抽象数据类型定义
 {
-public: 
+public:
 	void clear();                               //清空栈
 	bool push(const T item);                    //入栈
 	bool pop(T & item);                         //出栈
@@ -41,10 +41,10 @@ template <class T>arrStack<T>::arrStack(int size=30)
 {
 	maxSize=size;
 	top=-1;
-	st=new T[maxSize];                         //申请空间                          
+	st=new T[maxSize];                         //申请空间
 }
 template <class T>arrStack<T>::arrStack()
-{ 
+{
 	top=-1;
 	maxSize=0;
 	st=NULL;
@@ -59,7 +59,7 @@ template <class T>void arrStack<T>::clear()
 }
 template <class T>bool arrStack<T>::push(const T item)
 {
-	if(top==maxSize-1)                        // 判断栈能否入栈   
+	if(top==maxSize-1)                        // 判断栈能否入栈
 	{                                        // 栈顶元素最大下标为 maxSize-1
 		cout<<"栈满，无法入栈"<<endl;
 		return false;
@@ -92,7 +92,7 @@ template <class T>bool arrStack<T>::isEmpty()
 {
 	if(top==-1)
 		return true;
-	else 
+	else
 		return false;
 }
 template <class T>bool arrStack<T>::isFull()
@@ -133,7 +133,7 @@ bool InfixtoPostfix::Precede(char opr1,char opr2)
 	{
 		case'*':
 		case'/':
-			return true; 
+			return true;
 		case'+':
 		case'-':
 			switch(opr2)
@@ -166,7 +166,7 @@ void InfixtoPostfix::Conversion()
 				cout<<"MIssing parenthsis"<<endl;
 				return;
 			}
-			
+
 			ops.gettop(op);
 			while(!ops.isEmpty()&&op!='(')
 			{
@@ -219,7 +219,7 @@ void InfixtoPostfix::Conversion()
 		string2[j++]=op;
 		ops.pop(op);
 	}
-	
+
 	string2[j++]='=';
 	string2[j]='\0';
 	//cout << "********************" <<endl;
@@ -346,7 +346,7 @@ void Calculator<ELEM>::Run()
 		cout<<"Expression Error"<<endl;
 }
 
-void main ()
+int main ()
 {
 	char st[50]="23+(34*45)/(5+6+7)=";
 	Calculator<double>  str(st,30,30);

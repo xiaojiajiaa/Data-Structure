@@ -1,7 +1,7 @@
 //朴素模式匹配的简单代码实现
 #include <iostream>
 using namespace std;
-void main()
+int main()
 {
 	const int Maxsize = 18;
 	const int maxsize = 9;
@@ -13,9 +13,11 @@ void main()
 	{
 		for(j=0;j<maxsize;j++)
 			if (ch[i+j] != sh[j]) break;
-			if (j==maxsize-1) 
+			if (j==maxsize-1)
 				cout<<i;
 	}
+
+	return 0;
 }
 
 

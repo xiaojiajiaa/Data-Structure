@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 const int stackIncreament = 20;//全局变量，用于溢出处理时动态的增加需要的存储单元数
@@ -34,7 +35,7 @@ class Stack
 		{
 			if (top == -1)
 				return true;
-			else 
+			else
 				return false;
 		};
 };

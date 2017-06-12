@@ -86,7 +86,7 @@ bool InkLink<T> :: output()
 template <class T>
 Linknode<T> *InkLink<T> :: setPos(int i)
 {
-	if (i<0) 
+	if (i<0)
 	{
 		cout<<"The location is illgal"<<endl;
 		return NULL;
@@ -165,13 +165,13 @@ int InkLink<T> :: length()
 template <class T>
 bool InkLink<T> :: makeEmpty()
 {
-	
-	if (head==NULL) 
+
+	if (head==NULL)
 	{
 		cout<<"The list is empty"<<endl;
 		return false;
 	}
-	else 
+	else
 	{
 		while(head!=NULL)
 		{
@@ -202,7 +202,7 @@ bool InkLink<T> :: getpos (int &p,const T value)
 	return true;
 };
 /*此函数的时间复杂度为O（n）,循环次数由标志位决定*/
-void main()
+int main()
 {
 	int n=0;int value;
 	InkLink <int> list;
@@ -228,5 +228,5 @@ void main()
 	list.makeEmpty();
 	cout<<endl;
 	cout<<"The long of list is:"<<list.length()<<endl;
-	
+    return 0;
 }

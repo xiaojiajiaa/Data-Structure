@@ -3,11 +3,12 @@
 
 
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 //头结点类
 template <class T>
-class Linknode 
+class Linknode
 {
 	public:
 		T data;
@@ -124,7 +125,7 @@ bool InkLink<T> :: output()
 template <class T>
 bool InkLink<T> :: setPos(int i,T &x)
 {
-	if (i <= 0 || i > curlen) 
+	if (i <= 0 || i > curlen)
 	{
 		cout<<"The location is illgal";
 		return false;
@@ -148,7 +149,7 @@ bool InkLink<T> :: setPos(int i,T &x)
 
 
 template <class T>
-bool InkLink<T> :: insert (int i) 
+bool InkLink<T> :: insert (int i)
 {
 	if (i < 1 || i > curlen)
 	{
@@ -181,7 +182,7 @@ bool InkLink<T> :: insert (int i)
 template <class T>
 bool InkLink<T> :: makeEmpty()
 {
-	
+
 	int i = 1;
 	for(i = 1;i <= curlen;i++)
 	{
@@ -198,7 +199,7 @@ bool InkLink<T> :: makeEmpty()
 
 
 
-void main()
+int main()
 {
 	InkLink<int> list;
 
@@ -238,11 +239,11 @@ void main()
     //置空链表，并输出测试是否正确
 	list.makeEmpty();
 	list.output();
-
+    return 0;
 }
 
-		
 
-			
+
+
 
 

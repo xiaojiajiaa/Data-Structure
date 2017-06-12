@@ -18,7 +18,7 @@ class Linknode
 		}
 };
 template <class T>
-class InkLink:public Linknode<T> 
+class InkLink:public Linknode<T>
 {
 	private:
 		Linknode<T> *head,*tail;
@@ -65,7 +65,7 @@ bool InkLink<T> :: output()
 	}
 	return true;
 };
-void main()
+int main()
 {
 	InkLink<int> list;
 
@@ -74,4 +74,5 @@ void main()
 	cin>>m;
 	list.create(m);
 	list.output();
+	return 0;
 }

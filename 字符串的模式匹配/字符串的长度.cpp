@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void main()
+int main()
 {
 	char ch[5] = "work";//从此程序可以得出字符串的长度包含\0,如果改成char ch[4]，错误
 	cout<<"字符串的长度为:"<<sizeof(ch)<<endl;
@@ -8,4 +8,5 @@ void main()
 	{
 		cout<<ch[i]<<' ';
 	}
+	return 0;
 }

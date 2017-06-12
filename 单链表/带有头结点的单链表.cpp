@@ -128,14 +128,14 @@ bool InkLink<T> ::insert(int i)
 	cout<<"请输入要插入的结点的数据值:";
 	cin>>a;
 	Linknode<T> *p=setPos(i);
-	
+
 	Linknode<T> *newnode=new Linknode<T>(a);//动态申请一个新的结点用作插入
 	newnode->next=p->next;/*如果这句和下面一句反过来执行就会发生错误*/
 	p->next=newnode;
 	//newnode->next=p->next;
 	return true;
 };
-void main()
+int main()
 {
 	InkLink<int> list;
 	cout<<"请输入标志位，由用户自定义,输入在键盘上能敲入的字符:";
@@ -145,7 +145,7 @@ void main()
 	list.create(m);
 	list.output();
 	list.length();
-	
+
 	int i;
 	cout<<"请输入要插入结点的位置:";
 	cin>>i;
@@ -155,4 +155,5 @@ void main()
 
 	list.makeEmpty();
 	list.output();
+	return 0;
 }
