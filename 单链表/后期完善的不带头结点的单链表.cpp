@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 template <class T>//创建单链表的结点模板类
@@ -43,7 +42,7 @@ class InkLink:public Linknode<T>//链表类继承上面的结点类，并且是公有继承
 		Linknode<T> *setPos(int i);//根据用户输入的相对位置查找值，并返回该结点的指针
 		bool insert(int i);//根据用户的需要插入新的结点
 		int length();//求单链表的长度
-		bool getpos( int &p,const T	value);//根据用户的需要输入要查找的数据值，从而实现在单链表中查找是否存在该数据，如果存在返回其相对地址
+		bool getpos( int &p,const T value);//根据用户的需要输入要查找的数据值，从而实现在单链表中查找是否存在该数据，如果存在返回其相对地址
 };
 template <class T>
 void InkLink<T> :: create(T endTag)

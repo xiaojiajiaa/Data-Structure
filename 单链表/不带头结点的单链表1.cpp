@@ -6,18 +6,18 @@ using namespace std;
 template <class T>//创建单链表的结点模板类
 class Linknode
 {
-	public:
-		T data;
-		Linknode<T> *next;
-		Linknode(T const info,Linknode<T> *newnext=NULL)//此构造函数主要用来创建除头结点以外的其它结点
-		{
-			data=info;
-			next=newnext;
-		}
-		Linknode(Linknode<T> *newnext=NULL)//此构造函数主要用于创建带有头结点的单链表的头结点
-		{
-			next=newnext;
-		}
+    public:
+	T data;
+	Linknode<T> *next;
+	Linknode(T const info,Linknode<T> *newnext=NULL)//此构造函数主要用来创建除头结点以外的其它结点
+	{
+		data=info;
+		next=newnext;
+	}
+	Linknode(Linknode<T> *newnext=NULL)//此构造函数主要用于创建带有头结点的单链表的头结点
+	{
+		next=newnext;
+	}
 };
 
 template <class T>//创建单链表类
@@ -46,7 +46,7 @@ class InkLink:public Linknode<T>//链表类继承上面的结点类，并且是�
 		Linknode<T> *setPos(int i);//根据用户输入的相对位置查找值，并返回该结点的指针
 		bool insert(int i);//根据用户的需要插入新的结点
 		int length();//求单链表的长度
-		bool getpos( int &p,const T	value);//根据用户的需要输入要查找的数据值，从而实现在单链表中查找是否存在该数据，如果存在返回其相对地址
+		bool getpos( int &p,const T value);//根据用户的需要输入要查找的数据值，从而实现在单链表中查找是否存在该数据，如果存在返回其相对地址
 };
 template <class T>
 void InkLink<T> :: create(T endTag)
@@ -82,7 +82,7 @@ template <class T>
 bool InkLink<T> :: output()
 {
 	Linknode<T> *current = head;//尽量避免使用头指针直接输出，所以将其赋值给一个临时的局部变量
-	cout << "head";
+	// cout << "head";
 	while(current != NULL)
 	{
 		cout<<"->"<<current->data;
